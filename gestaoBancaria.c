@@ -1,16 +1,11 @@
 #include <stdio.h>
 
-void criarConta(){}
-int trasferencia(){return 0;}
-int saldoDaConta(){return 0;}
-int login(){return 0;}
-
 typedef struct{
     int id, telefone;
     char nome[50], email[30], cpf[12];
 }person;
 
-int main(){
+void criarConta(){
     FILE * infile;
 
     infile = fopen("person.dat", "wb+");
@@ -20,5 +15,13 @@ int main(){
         fclose(infile);
     }
 
+}
+int trasferencia(){return 0;}
+int saldoDaConta(){return 0;}
+int login(){return 0;}
+
+
+int main(){
+    criarConta();
     return 0;
 }
